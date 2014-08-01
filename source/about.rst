@@ -17,41 +17,39 @@
 What's New in |version|
 =======================
 
-CloudStack |version| includes the following new features and improvements.
+CloudStack |version| 包括以下新的特性和改进.
 
 .. contents::
    :local:
    :backlinks: top
 
 
-Support managed storage for root disks
+支持管理 root disks存储
 --------------------------------------
 
-   Use of Primary Storage Plug-in for Root disks. See `Configuring a Storage Plug-in 
+   使用Root disks主存储插件. 参考 `Configuring a Storage Plug-in 
    <http://docs.cloudstack.apache.org/projects/cloudstack-installation/en/master/configuration.html#configuring-a-storage-plug-in>`_
       
    ====================== ============================================================================
-   Supported hypervisors: XenServer, VMware
+   支持的hypervisors: XenServer, VMware
    ====================== ============================================================================
 
 
-Root disk resize
+Root disk 大小重置
 ----------------
 
-   Allow Root disk resize which remove need to have multiple templates of the 
-   same Operating System for different disk size.
+   当对同一个操作系统的摸板，根据系统盘大小不同设置多个摸板时，允许重置系统大小
    
    ====================== ============================================================================
-   Supported hypervisor:  KVM
+   支持的hypervisor:       KVM
    Link                   `Root resize Functional spec`_
    ====================== ============================================================================
 
 
-Per primary Storage OverProvisioning
+每一个主存储的超分使用
 ------------------------------------
 
-   Added per Primary Storage ``storage.overprovisioning.factor`` setting to 
-   overseed the Global Settings value.
+    在全局配置参数中为每一个主存储添加配置参数``storage.overprovisioning.factor``.
    
    -  admin can update an existing primary store by setting 
       ``storage.overprovisioning.factor`` in the per primary setting.
@@ -59,20 +57,20 @@ Per primary Storage OverProvisioning
    -  This value will override the value at the global level. This leverages 
       the granularity of global parameters introduced in 4.2
    
-   -  To fall back to the global value, null value can be passed.
+   -  如果要使默认的全局配置参数, 将该值设置为空.
    
-   -  To disable overprovision a value of 1 will be passed.
+   -  若要禁用超分使用，将该设置为1.
  
    ====================== ============================================================================
-   Supported hypervisor:  KVM
+   支持的hypervisor:       KVM
    link                   `Storage Over Prov. Functional spec`_
    ====================== ============================================================================
 
 
-VMWare Support for DRS
+支持VMWare  DRS
 ----------------------
 
-   VMware DRS(Distributed Resource Scheduler), VM HA(High Availability): 
+   VMware DRS(分布式资源调), VM HA(高可用): 
    Provide highly available resources to your workloads. Balance workloads for 
    optimal performance. Scale and manage computing resources without service 
    disruption.
@@ -98,19 +96,18 @@ VMWare Support for DRS
       within a cluster, by assigning affinity rules 
    
    ====================== ============================================================================
-   Supported hypervisors: VMware
+   支持的 hypervisors: VMware
    Link                   `DRS functional spec`_
    ====================== ============================================================================
 
 
-Region wide Guest networks and VPC 
+Region 级别 Guest networks and VPC 
 ----------------------------------
 
-   Region level Guest networks and VPC deployment. Allowing VPC tiers and guest
-   networks accessibility across zones.
+   创建Region 级别的 Guest networks 和 VPC . Allowing VPC tiers and guest网络accessibility across zones.
 
    ====================== ============================================================================
-   Supported hypervisors: N/A
+   支持 hypervisors:         N/A
    Link                   `VPC region functional spec`_
    ====================== ============================================================================
 
@@ -128,24 +125,24 @@ Virtual Router Service Failure Alerting
    ====================== ============================================================================
 
 
-Distributed routing and network ACL with OVS plug-in
+ 通过 OVS插件，实现分布式路由network ACL
 ----------------------------------------------------
 
-   Support distributed routing and network ACL with OVS plug-in.
+   通过 OVS插件，实现分布式路由network ACL.
 
    ====================== ============================================================================
-   Supported hypervisors: xenserver, kvm, vmware
+   支持的 hypervisors:      xenserver, kvm, vmware
    Link                   `CLOUDSTACK-6161 <https://issues.apache.org/jira/browse/CLOUDSTACK-6161>`_
    ====================== ============================================================================
 
 
-Hyper-V support improvements
+Hyper-V support 改进
 ----------------------------
 
 Zone Wide Primary Store in Hyper-V
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   SMB share as zone wide primary storage.
+   使用共享SMB 为 zone 提供主存储.
 
    ====================== ============================================================================
    Supported hypervisors: Hyper-V
@@ -153,10 +150,10 @@ Zone Wide Primary Store in Hyper-V
    ====================== ============================================================================
 
 
-VPC support on Hyper-V
+在Hyper-V上支持VPC
 ~~~~~~~~~~~~~~~~~~~~~~
 
-   Provide VPC capability on Hyper-V hypervisor.
+   基于Hyper-V提供 VPC capability .
    
    ====================== ============================================================================
    Supported hypervisors: Hyper-V
@@ -164,7 +161,7 @@ VPC support on Hyper-V
    ====================== ============================================================================
 
 
-Storage Live-Migration support for Hyper-V
+支持为Hyper-V的存储提供在线迁移
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    Hyper-V 2012 R2 allows migration of volumes (virtual disks) of a virtual
